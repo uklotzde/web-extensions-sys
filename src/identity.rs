@@ -39,4 +39,11 @@ extern "C" {
         details: &JsValue,
         callback: &Function,
     ) -> Result<(), JsValue>;
+
+    #[wasm_bindgen(method, catch, js_name = getProfileUserInfo)]
+    pub fn get_profile_user_info_with_details_and_callback(
+        this: &Identity,
+        details: &JsValue,
+        callback: &Function,
+    ) -> Result<(), JsValue>;
 }
